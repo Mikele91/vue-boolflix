@@ -2,8 +2,8 @@
   <div id="app">
     <div class="container">
     <Header @search="searchFilm"/>
-    <Films :info="searchText"/>
 
+    <Films :info="searchText"/>
     </div>
   </div>
 </template>

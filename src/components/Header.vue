@@ -1,7 +1,7 @@
 <template>
-  <header>
+  <header class="my-5">
        <form action="" class="d-flex">
-        <input type="text" class="form-control" placeholder="Search Characher" v-model="inputText">
+        <input type="text" class="form-control" placeholder="Search Film" v-model="inputText">
         <button type="submit" class="btn btn-primary mx-3" @click.prevent="$emit('search', inputText)">Search</button>
         <button class="btn btn-warning" @click.prevent="resetSearch"> Reset</button>
     </form>
@@ -27,6 +27,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+@import '../assets/style/common.scss';
 
 </style>
