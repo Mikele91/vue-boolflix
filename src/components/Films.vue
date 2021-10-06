@@ -1,20 +1,22 @@
 <template>
-<div>
-  <div class="d-flex" v-for= "(film, index) in info" :key="index" >
+<div  class="cards d-flex">
+  <div v-for= "(film, index) in infoFilm" :key="index" >
     <CardFilm :info= "film"/>
+  </div>
+   <div v-for= "(serie, index) in infoTv" :key="index" >
+    <CardFilm :serieTv= "serie"/>
   </div>
 </div>
 </template>
 
 <script>
 import CardFilm from './CardFilm.vue'
-
 // import axios from 'axios';
 
 export default {
     name:"Films",
     components:{
-        CardFilm,
+        CardFilm,   
     },
     data(){
         return{
@@ -22,51 +24,15 @@ export default {
         }
     },
     props:{
-        info:Array
+        infoFilm:Array,
+        infoTv:Array,
         },
-    //  created(){
-    //     axios.get('https://api.themoviedb.org/3/search/movie',
-    //             {
-    //                 params:{
-    //                     api_key: '7e390297db8f760afc45d7092f6f5846',
-    //                     query: this.info,
-    //                     language: 'it-IT',
-    //                 }
-    //             }
-    //     ).then( (res)=> {
-    //         this.films = res.data.results;
-    //     });
-
-    //     // axios
-    //     // .get("https://api.themoviedb.org/3/search/movie?api_key=e99307154c6dfb0b4750f6603256716d&query=ritorno+al+fut")
-    //     // .then( (res)=> {
-    //     //     this.films = res.data.results;
-    //     // })
-    // },
-    //  watch(){
-    //     axios.get('https://api.themoviedb.org/3/search/movie',
-    //             {
-    //                 params:{
-    //                     api_key: '7e390297db8f760afc45d7092f6f5846',
-    //                     query: this.info,
-    //                     language: 'it-IT',
-    //                 }
-    //             }
-    //     ).then( (res)=> {
-    //         this.films = res.data.results;
-    //     });
-
-
-    //     // axios
-    //     // .get("https://api.themoviedb.org/3/search/movie?api_key=e99307154c6dfb0b4750f6603256716d&query=ritorno+al+fut")
-    //     // .then( (res)=> {
-    //     //     this.films = res.data.results;
-    //     // })
-    // },
 }
 </script>
 
 <style scoped lang="scss">
-
+.cards{
+    overflow-x: auto;
+}
 
 </style>
