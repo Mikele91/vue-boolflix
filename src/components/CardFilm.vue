@@ -1,6 +1,6 @@
 <template>
   <div class="film">
-        <img :src="`https://image.tmdb.org/t/p/w300${info.backdrop_path}`" :alt="info.original_title">
+        <img :src="(info.poster_path!= null)?`https://image.tmdb.org/t/p/w300${info.poster_path}`:'https://via.placeholder.com/300x300?text=Image+NO+Found'" :alt="info.original_title">
         <h3>{{info.original_title||info.original_name}}</h3>
         <div>{{info.title||info.name}}</div>
         <!-- <div>{{info.original_language}}</div> -->
@@ -29,3 +29,7 @@ export default {
 <style scoped lang="scss">
 
 </style>
+
+
+468x60?text=Visit+Blogging.com+Now
+
