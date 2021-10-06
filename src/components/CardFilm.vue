@@ -4,7 +4,9 @@
         <h3>{{info.original_title||info.original_name}}</h3>
         <div>{{info.title||info.name}}</div>
         <!-- <div>{{info.original_language}}</div> -->
-        <div>{{printStar(vote(info.vote_average))}}</div>
+        <div>
+          <i v-for="n in 5" :key="n" class="fa-star" :class="(n <= vote()) ? 'fas' : 'far'"></i>
+        </div>
 
         <div class="lang"><lang-flag :iso='info.original_language' :squared="false"/></div>      
   </div>
@@ -23,31 +25,21 @@ export default {
       // serieTv:Object
     },
     methods:{
-      vote: function(num){
-        let changeStars =  Math.ceil(num/2);
-        return changeStars
+      vote: function(){
+        return  Math.ceil(this.info.vote_average/2);
+   
     },
 
-    printStar: function(elm) {
-        let star=[];
-        for(let i = 0; i < 5 ; i++){
-          if (elm < 5){
-            star +=star.push('<i class="fas fa-star"></i> piena');
-          } else{
-            
-            star+= star.push('<i class="far fa-star"></i> vuota');
-
-          }
-          return star
-        }
-
-    }
+    
   }
 }
 </script>
 
 <style scoped lang="scss">
 @import '../assets/style/common.scss';
+i{
+  color: yellow;
+}
 </style>
 
 
