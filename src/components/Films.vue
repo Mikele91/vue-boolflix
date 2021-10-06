@@ -1,11 +1,15 @@
 <template>
-<div  class="cards d-flex">
-  <div v-for= "(film, index) in infoFilm" :key="index" >
-    <CardFilm :info= "film"/>
-  </div>
-   <div v-for= "(serie, index) in infoTv" :key="index" >
-    <CardFilm :serieTv= "serie"/>
-  </div>
+<div  class="cards ">
+    <div class="films d-flex">
+        <div v-for= "(film, index) in infoFilm" :key="index" >
+            <CardFilm :info= "film"/>
+        </div>
+    </div>
+    <div class="serie d-flex">
+        <div v-for= "(serie, index) in infoTv" :key="index" >
+            <CardFilm :info= "serie"/>
+        </div>
+    </div>
 </div>
 </template>
 
@@ -31,7 +35,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.cards{
+.films{
     overflow-x: auto;
 }
 

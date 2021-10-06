@@ -2,7 +2,6 @@
   <div id="app">
     <div class="container">
     <Header @search="searchFilm"/>
-
     <Films :infoFilm="films" :infoTv=" seriesTv"/>
     </div>
   </div>

@@ -1,9 +1,9 @@
 <template>
   <div class="film">
         <img :src="`https://image.tmdb.org/t/p/w300${info.backdrop_path}`" :alt="info.original_title">
-        <h3>{{info.original_title||serieTv.original_name}}</h3>
-        <div>{{info.title||serieTv.name}}</div>
-        <div>{{info.original_language}}</div>
+        <h3>{{info.original_title||info.original_name}}</h3>
+        <div>{{info.title||info.name}}</div>
+        <!-- <div>{{info.original_language}}</div> -->
         <div>{{info.vote_count}}</div>
 
         <div class="lang"><lang-flag :iso='info.original_language' :squared="false"/></div>      
@@ -20,7 +20,7 @@ export default {
     },
     props:{
       info: Object,
-      serieTv:Object
+      // serieTv:Object
     }
 
 }
