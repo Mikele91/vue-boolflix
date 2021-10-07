@@ -42,12 +42,13 @@ export default {
 @import '../assets/style/common.scss';
 .card
 {
-  width: 20rem;
-  height: 100%;
+  // margin: 1px ;
+  width: 22rem;
+  height: 30rem;
   background-size: cover;
   background-position: center;
   .effect_hover{
-    padding: .3125rem;
+    padding: .625rem;
     opacity: 0;
     width: 100%;
     height: 100%;
@@ -61,15 +62,10 @@ export default {
 
   .effect_hover:hover{
     color:white;
-    background-color: rgb(255 0 0 / 0.6);
+    background-color: rgb(0 0 0 / 0.6);
     
     opacity: 1;
-};
-
-
-  i{
-    // color: yellow;
-  }
+  };
 }
 </style>
 

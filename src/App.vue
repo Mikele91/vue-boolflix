@@ -26,6 +26,28 @@ export default {
       seriesTv:[],
     }
   },
+  created (){
+      axios.get('https://api.themoviedb.org/3/movie/popular',
+                {
+                    params:{
+                        api_key: '7e390297db8f760afc45d7092f6f5846',
+                        language: 'it-IT',
+                    }
+                }
+                ).then( (res)=> {
+                  this.films = res.data.results;
+                  }); 
+          axios.get('https://api.themoviedb.org/3/tv/popular',
+        {
+            params:{
+                api_key: '7e390297db8f760afc45d7092f6f5846',             
+                language: 'it-IT',
+            }
+        }
+        ).then( (res)=> {
+          this.seriesTv = res.data.results;
+          });       
+  },
   methods:{
         searchFilm(text) {
           axios.get('https://api.themoviedb.org/3/search/movie',

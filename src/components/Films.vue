@@ -1,10 +1,13 @@
 <template>
 <div  class="cards ">
+    <div class="genere">Film</div>
     <div class="films d-flex">
         <div v-for= "(film, index) in infoFilm" :key="index" >
             <CardFilm :info= "film"/>
         </div>
     </div>
+
+    <div class="genere">Serie Tv</div>
     <div class="serie d-flex">
         <div v-for= "(serie, index) in infoTv" :key="index" >
             <CardFilm :info= "serie"/>
@@ -35,6 +38,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.genere{
+    font: 700;
+    background-color: black;
+    color: white;
+}
   /* width */
 ::-webkit-scrollbar {
   height: 8px;
@@ -52,7 +60,7 @@ export default {
   border-radius: 15px;
 }
 .films, .serie{
-    height: 30rem;
+    // height: 30rem;
     overflow-x: auto;
  
 }
