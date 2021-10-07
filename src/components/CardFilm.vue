@@ -1,6 +1,6 @@
 <template>
-  <div class="film">
-        <img :src="(info.poster_path!= null)?`https://image.tmdb.org/t/p/w300${info.poster_path}`:'https://via.placeholder.com/300x300/000000/FFFFFF?text=Image+NO+Found'" :alt="info.original_title">
+  <div class="card">
+        <div :style="background-image:url( info.poster_path!= null?`https://image.tmdb.org/t/p/w300${info.poster_path}`:'https://via.placeholder.com/300x300/000000/FFFFFF?text=Image+NO+Found)'">
         <h3>{{info.original_title||info.original_name}}</h3>
         <div>{{info.title||info.name}}</div>
         <!-- <div>{{info.original_language}}</div> -->
@@ -37,8 +37,16 @@ export default {
 
 <style scoped lang="scss">
 @import '../assets/style/common.scss';
-i{
-  color: yellow;
+.card
+{
+  width: 12.5rem;
+  height: 100%;
+  background-image: url("info.poster_path!= null?`https://image.tmdb.org/t/p/w300${info.poster_path}`:'https://via.placeholder.com/300x300/000000/FFFFFF?text=Image+NO+Found'") ;
+  color:white;
+
+  i{
+    color: yellow;
+  }
 }
 </style>
 

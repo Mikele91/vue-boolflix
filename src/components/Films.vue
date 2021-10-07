@@ -35,7 +35,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.films{
+.films, .serie{
+    height: 30rem;
     overflow-x: auto;
 }
 
