@@ -1,5 +1,6 @@
 <template>
   <header class="d-flex">
+      
         <div class="logo"> <img src="https://loghi-famosi.com/wp-content/uploads/2020/04/Netflix-Logo.png" alt=""></div>
       <div class="contiainer w-100">
        <form action="" class="d-flex">

@@ -1,10 +1,10 @@
 <template>
   
-    <div class="card" :style="`background-image:url( ${info.poster_path ? `https://image.tmdb.org/t/p/w300${info.poster_path}` : `https://via.placeholder.com/300x300/000000/FFFFFF?text=Image+NO+Found)`}`">
+    <div data-aos="fade-right" class="card" :style="`background-image:url( ${info.poster_path ? `https://image.tmdb.org/t/p/w300${info.poster_path}` : `https://via.placeholder.com/300x300/000000/FFFFFF?text=Image+NO+Found)`}`">
       <div  class="effect_hover">
       <h3 class="text-center">{{info.original_title||info.original_name}}</h3>
       <div>{{info.title||info.name}}</div>
-      <div class="text_overview">{{info.overview|| "Nessuna Descrizione"}}</div>
+      <div data-aos="flip-right" class="text_overview">{{info.overview|| "Nessuna Descrizione"}}</div>
       <!-- <div>{{info.original_language}}</div> -->
       <div>
         <i v-for="n in 5" :key="n" class="fa-star" :class="(n <= vote()) ? 'fas' : 'far'"></i>
@@ -53,6 +53,7 @@ export default {
     width: 100%;
     height: 100%;
     overflow-y: auto;
+    scroll-behavior: smooth;
 
     .text_overview{
       font-size: 12px;

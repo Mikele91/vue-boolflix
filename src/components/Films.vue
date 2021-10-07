@@ -1,7 +1,7 @@
 <template>
 <div  class="cards ">
     <div class="genere">Film</div>
-    <div class="films d-flex">
+    <div  class="films d-flex">
         <div v-for= "(film, index) in infoFilm" :key="index" >
             <CardFilm :info= "film"/>
         </div>

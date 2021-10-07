@@ -11,6 +11,8 @@
 import Films from './components/Films.vue'
 import Header from './components/Header.vue'
 import axios from 'axios';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 export default {
@@ -26,7 +28,10 @@ export default {
       seriesTv:[],
     }
   },
+  
   created (){
+      AOS.init(),
+
       axios.get('https://api.themoviedb.org/3/movie/popular',
                 {
                     params:{
