@@ -1,6 +1,6 @@
 <template>
   <header class="d-flex">
-        <div class="logo"> <img src="https://hd2.tudocdn.net/815221?w=100&h=50" alt=""></div>
+        <div class="logo"> <img src="https://loghi-famosi.com/wp-content/uploads/2020/04/Netflix-Logo.png" alt=""></div>
       <div class="contiainer w-100">
        <form action="" class="d-flex">
         <input type="text" class="form-control" placeholder="Search Film" v-model="inputText">
@@ -33,11 +33,13 @@ export default {
 <style scoped lang="scss">
 @import '../assets/style/common.scss';
 header{
-    border: 2px solid red;
+    background-color: rgb(0 0 0 / 0.8);
+    // border: 2px solid red;
     justify-content: space-between;
     align-items: center;
-    height: 10rem;
-    .logo{
+    height: 5rem;
+    .logo img{
+        width: 6.25rem;
         margin: 0 .625rem 
     };
     
@@ -46,7 +48,7 @@ header{
     background-color: #fff;
     outline: 0;
     box-shadow: 0 0 0 0.20rem rgb(255 0 0 / 0.8);
-    }
+    };
 }
 
 </style>
